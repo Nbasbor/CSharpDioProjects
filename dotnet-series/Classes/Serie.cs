@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace dotnet_series
 {
+    // cria a serie com suas caracteristicas ( genero, titulo, descrição, An0, Excluir)
     public class Serie : EntidadeBase
     {
         private Genero Genero { get; set; }
@@ -18,7 +19,7 @@ namespace dotnet_series
 
         private bool Excluido { get; set; }
 
-
+        //seta construtor da serie com os parâmetro
         public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
             this.Id = id;
