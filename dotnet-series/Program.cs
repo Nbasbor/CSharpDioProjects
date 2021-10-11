@@ -11,6 +11,7 @@ namespace dotnet_series
 
 			while (opcaoUsuario.ToUpper() != "X")
 			{
+				//Lista de opções switch
 				switch (opcaoUsuario)
 				{
 					case "1":
@@ -42,7 +43,8 @@ namespace dotnet_series
 			Console.WriteLine("Obrigado por utilizar nossos serviços.");
 			Console.ReadLine();
 		}
-
+		
+	    	//chama método de excluir
 		private static void ExcluirSerie()
 		{
 			Console.Write("Digite o id da série: ");
@@ -60,14 +62,12 @@ namespace dotnet_series
 
 			Console.WriteLine(serie);
 		}
-
+		//chama o metodo de atualizar
 		private static void AtualizarSerie()
 		{
 			Console.Write("Digite o id da série: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
-			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
-			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
 			foreach (int i in Enum.GetValues(typeof(Genero)))
 			{
 				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
@@ -85,13 +85,14 @@ namespace dotnet_series
 			string entradaDescricao = Console.ReadLine();
 
 			Serie atualizaSerie = new Serie(id: indiceSerie,
-										genero: (Genero)entradaGenero,
-										titulo: entradaTitulo,
-										ano: entradaAno,
-										descricao: entradaDescricao);
+			genero: (Genero)entradaGenero,
+			titulo: entradaTitulo,
+			ano: entradaAno,
+			descricao: entradaDescricao);
 
 			repositorio.Atualiza(indiceSerie, atualizaSerie);
 		}
+	    	//método de listar a séries
 		private static void ListarSeries()
 		{
 			Console.WriteLine("Listar séries");
@@ -111,38 +112,38 @@ namespace dotnet_series
 				Console.WriteLine("#ID {0}: - {1} {2}", serie.retornaId(), serie.retornaTitulo(), (excluido ? "*Excluído*" : ""));
 			}
 		}
-
+		//método para inserir series
 		private static void InserirSerie()
 		{
 			Console.WriteLine("Inserir nova série");
 
-			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
-			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
+
 			foreach (int i in Enum.GetValues(typeof(Genero)))
 			{
 				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
 			}
+			//lê a entrada de genero
 			Console.Write("Digite o gênero entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
-
+			//lê a entrada de Titulo
 			Console.Write("Digite o Título da Série: ");
 			string entradaTitulo = Console.ReadLine();
-
+			//lê a entrada de data
 			Console.Write("Digite o Ano de Início da Série: ");
 			int entradaAno = int.Parse(Console.ReadLine());
-
+			//lê a entrada de descrição
 			Console.Write("Digite a Descrição da Série: ");
 			string entradaDescricao = Console.ReadLine();
 
 			Serie novaSerie = new Serie(id: repositorio.ProximoId(),
-										genero: (Genero)entradaGenero,
-										titulo: entradaTitulo,
-										ano: entradaAno,
-										descricao: entradaDescricao);
+			genero: (Genero)entradaGenero,
+			titulo: entradaTitulo,
+			ano: entradaAno,
+			descricao: entradaDescricao);
 
 			repositorio.Insere(novaSerie);
 		}
-
+		//Lista as opções na tela inicial
 		private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
