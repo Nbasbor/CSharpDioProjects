@@ -1,5 +1,6 @@
 ﻿namespace dotnet_series
 {
+     // cria enumerador para tipo Gênero com cada item listado.
     public enum Genero
     {
         Acao = 1,
