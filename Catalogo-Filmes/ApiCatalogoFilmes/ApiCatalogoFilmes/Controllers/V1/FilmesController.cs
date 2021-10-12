@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ApiCatalogoFilmes.InputModel;
+using ApiCatalogoFilmes.ViewModel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,7 @@ namespace ApiCatalogoFilmes.Controllers.V1
         [HttpGet]
 
         //função assincrona
-        public async Task<ActionResult<List<object>>> Obter()
+        public async Task<ActionResult<List<FilmeViewModel>>> Obter()
         {
             return Ok();
         }
@@ -25,7 +27,7 @@ namespace ApiCatalogoFilmes.Controllers.V1
         [HttpGet("{idFilme:guid}")]
 
         //função assincrona que retorna apenas um filme
-        public async Task<ActionResult<object>> Obter(Guid idFilme)
+        public async Task<ActionResult<FilmeViewModel>> Obter(Guid idFilme)
         {
             return Ok();
         }
@@ -34,7 +36,7 @@ namespace ApiCatalogoFilmes.Controllers.V1
         [HttpPost]
 
            //Inserir Filme
-        public async Task<ActionResult<object>> InserirFilme(object filme)
+        public async Task<ActionResult<FilmeViewModel>> InserirFilme(FilmeInputModel filme)
         {   
             return Ok();
         }
@@ -42,7 +44,7 @@ namespace ApiCatalogoFilmes.Controllers.V1
         //HttpPut Atualiza recurso inteiro
         [HttpPut("{idFilme:guid}")]
 
-        public async Task<ActionResult> AtualizarFilmes(Guid idFilme, object filmes)
+        public async Task<ActionResult> AtualizarFilmes(Guid idFilme, FilmeInputModel filmes)
         {
             return Ok();
         }
