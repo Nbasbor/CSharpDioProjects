@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiCatalogoFilmes.ViewModel
+namespace ApiCatalogoFilmes.Entities
 {
-    public class FilmeViewModel
+    public class Filme
     {
         //criação da id
         public Guid Id { get; set; }
@@ -15,10 +15,6 @@ namespace ApiCatalogoFilmes.ViewModel
 
         //criação do preço
         public double Preco { get; set; }
-
-        internal int Count()
-        {
-            throw new NotImplementedException();
-        }
     }
+
 }
