@@ -1,4 +1,5 @@
 ﻿using ApiCatalogoFilmes.InputModel;
+using ApiCatalogoFilmes.Services;
 using ApiCatalogoFilmes.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +14,22 @@ namespace ApiCatalogoFilmes.Controllers.V1
     [ApiController]
     public class FilmesController : ControllerBase
     {
+
+        private readonly IFilmeService _filmeService;
+
+        public FilmesController(IFilmeService filmeService)
+        {
+            _filmeService = filmeService;         
+        }
+
         //Indica que é um método get
         [HttpGet]
 
         //função assincrona
         public async Task<ActionResult<List<FilmeViewModel>>> Obter()
         {
-            return Ok();
+            var result = await _filmeService.Obter(1, 5);
+            return Ok(result);
         }
 
 
