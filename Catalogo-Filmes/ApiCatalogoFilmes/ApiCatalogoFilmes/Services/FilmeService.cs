@@ -46,7 +46,7 @@ namespace ApiCatalogoFilmes.Services
             };
         }
 
-        public async Task<FilmeViewModel> Inserir(FilmeInputModel jogo)
+        public async Task<FilmeViewModel> Inserir(FilmeInputModel filme)
         {
             var entidadeFilme = await _filmeRepository.Obter(filme.Nome);
 
@@ -72,12 +72,12 @@ namespace ApiCatalogoFilmes.Services
             };
         }
 
-        public async Task Atualizar(Guid id, FilmeInputModel jogo)
+        public async Task Atualizar(Guid id, FilmeInputModel filme)
         {
-            var entidadeJogo = await _filmeRepository.Obter(id);
+            var entidadeFilme = await _filmeRepository.Obter(id);
 
             //caso não exista 
-            if (entidadeJogo == null)
+            if (entidadeFilme == null)
                 throw new Exception("Filme Não Cadastrado");
 
             entidadeFilme.Nome = filme.Nome;
