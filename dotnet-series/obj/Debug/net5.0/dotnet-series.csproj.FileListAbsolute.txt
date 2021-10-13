@@ -1,0 +1,5 @@
+C:\Users\simon\Documents\Nanda\Dev\C#\DIO\DotNet-Series\DotNet-Series\dotnet-series\obj\Debug\net5.0\dotnet-series.csproj.AssemblyReference.cache
+C:\Users\simon\Documents\Nanda\Dev\C#\DIO\DotNet-Series\DotNet-Series\dotnet-series\obj\Debug\net5.0\dotnet-series.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\Documents\Nanda\Dev\C#\DIO\DotNet-Series\DotNet-Series\dotnet-series\obj\Debug\net5.0\dotnet-series.AssemblyInfoInputs.cache
+C:\Users\simon\Documents\Nanda\Dev\C#\DIO\DotNet-Series\DotNet-Series\dotnet-series\obj\Debug\net5.0\dotnet-series.AssemblyInfo.cs
+C:\Users\simon\Documents\Nanda\Dev\C#\DIO\DotNet-Series\DotNet-Series\dotnet-series\obj\Debug\net5.0\dotnet-series.csproj.CoreCompileInputs.cache

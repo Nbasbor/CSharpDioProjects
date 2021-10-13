@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = dotnet_series
-build_property.ProjectDir = C:\Users\simon\Documents\Nanda\Dev\C#\DIO\DotNet-Series\DotNet-Series\dotnet-series\
+build_property.ProjectDir = C:\Users\simon\Documents\Nanda\Dev\C#\DIO\DotNet-Series\Projeto\DotNet-Series\dotnet-series\

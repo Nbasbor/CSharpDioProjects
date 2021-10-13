@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "dotnet-series/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/dotnet-series.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/dotnet-series.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "dotnet-series/1.0.0": {
+      "type": "project",
+      "path": "../dotnet-series/dotnet-series.csproj",
+      "msbuildProject": "../dotnet-series/dotnet-series.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "dotnet-series >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\simon\\.nuget\\packages\\": {},
@@ -15,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series\\dotnet-series.csproj",
-      "projectName": "dotnet-series",
-      "projectPath": "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series\\dotnet-series.csproj",
+      "projectUniqueName": "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series.cons\\dotnet-series.cons.csproj",
+      "projectName": "dotnet-series.cons",
+      "projectPath": "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series.cons\\dotnet-series.cons.csproj",
       "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series\\obj\\",
+      "outputPath": "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series.cons\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -41,7 +60,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series\\dotnet-series.csproj": {
+              "projectPath": "C:\\Users\\simon\\Documents\\Nanda\\Dev\\C#\\DIO\\DotNet-Series\\DotNet-Series\\dotnet-series\\dotnet-series.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

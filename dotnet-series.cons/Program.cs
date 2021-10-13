@@ -1,9 +1,10 @@
 ﻿using System;
+using dotnet_series;
 
-namespace dotnet_series
+namespace dotnet_series.cons
 {
-    class Program
-    {
+	class Program
+	{
 		static SerieRepositorio repositorio = new SerieRepositorio();
 		static void Main(string[] args)
 		{
@@ -43,8 +44,8 @@ namespace dotnet_series
 			Console.WriteLine("Obrigado por utilizar nossos serviços.");
 			Console.ReadLine();
 		}
-		
-	    	//chama método de excluir
+
+		//chama método de excluir
 		private static void ExcluirSerie()
 		{
 			Console.Write("Digite o id da série: ");
@@ -92,7 +93,7 @@ namespace dotnet_series
 
 			repositorio.Atualiza(indiceSerie, atualizaSerie);
 		}
-	    	//método de listar a séries
+		//método de listar a séries
 		private static void ListarSeries()
 		{
 			Console.WriteLine("Listar séries");
@@ -118,7 +119,8 @@ namespace dotnet_series
 			Console.WriteLine("Inserir nova série");
 
 
-			foreach (int i in Enum.GetValues(typeof(Genero)))
+
+            foreach (int i in Enum.GetValues(typeof(Genero)))
 			{
 				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
 			}
